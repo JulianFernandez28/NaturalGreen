@@ -55,6 +55,7 @@ ul {
 #brand {
     padding-left: 40px;
     
+    
 }
   
 #logo {
@@ -63,6 +64,8 @@ ul {
     background: #fff;
     border-radius:50%;
     cursor: pointer;
+    padding-bottom: auto;
+    
   
   }
 #logo img
