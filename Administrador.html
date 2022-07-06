@@ -11,7 +11,7 @@
     <title>Natural Green Healt</title>
 </head>
 <body>
-    <header>
+    <header class="container-fluid position-sticky" style="top: 0;">
         <nav>
             <div id="brand">
                 <div id="logo">
@@ -26,6 +26,30 @@
             </ul>
         </nav>
     </header>
+    <div id="option" class="container-fluid bg-danger position-sticky">
+      <div class="row">
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link btn-primary " aria-current="page" href="#vita">Vitamina</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-primary" aria-current="page" href="#suple">Suplementoss</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-primary " aria-current="page" href="#suple">Belleza</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-primary" aria-current="page" href="#">Cuidado personal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-primary" aria-current="page" href="#">Bebidas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-primary" aria-current="page" href="#">Superfoods</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <main> 
       <!-- seccion todos -->
       <div class="title">
@@ -72,6 +96,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-warning " disabled>Editar</button>
                           <button type="button" class="btn btn-primary">Comprar</button>
                         </div>
                       </div>
@@ -118,6 +143,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-warning " disabled>Editar</button>
                           <button type="button" class="btn btn-primary" disabled >Comprar</button>
                         </div>
                       </div>
@@ -166,6 +192,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-warning " disabled>Editar</button>
                           <button type="button" class="btn btn-primary">Comprar</button>
                         </div>
                       </div>
@@ -174,46 +201,72 @@
             </div>
           </div>
           <div class="card border-primary" style="width: 18rem;">
-            <img src="Imagenes/polvodecarola.png" class="card-img-top" alt="...">
+            <img src="Imagenes/Signo/mas.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5>Polvos de carola</h5>
-              <p class="card-text">Polvo Traslucido Matificante,Te sorprenderas con los resultados desde 
-                la primera aplicación, nuestro polvo ayuda a matificar, quita el brillo y da una imagen de uniformidad en la tez.</p>
+              <h5>Agregar Producto</h5>
+              <p class="card-text">Apartado para el registro de lo diferentes tipos de productos que se pueden publicar en la pagina.</p>
             </div>
             <div class="row">
                 <!-- Button trigger modal -->
                   <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
                     Informacion
                   </button>
-
                   <!-- Modal -->
-                  <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal fade" id="staticBackdrop3"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="staticBackdropLabel3">Modal title</h5>
+                          <div class="row align-items-center">
+                            <h5 class="modal-title" id="staticBackdropLabel3">Agregar Producto</h5>
+                          </div>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
-                          <img src="Imagenes/polvodecarola.png" class="card-img-top" alt="...">
-                          <div class="row">
-                            <p>
-                              El arroz contiene almidón, complejo B y vitamina E lo cual lo hace un gran antioxidante, ayuda a hidratar, regenerar y reafirmar la piel. 
-                              La avena hidrata, calma, protege y alivia. Juntos hacen que este polvo brinde una textura deliciosa a tu cara, es de uso diario.
-                            </p>      
-                          </div>
-                          <div class="row" >
-                            <div class="col">
-                              <p><b>Codigo: </b>12434590</p>
+                        <div class="modal-body" id="color_form">
+                          <form>
+                            <div class="mb-3">
+                              <label for="example" class="form-label border-success" >Nombre</label>
+                              <input class="form-control form-control-lg border-warning" style="border-radius: 20px;" type="text" placeholder="Producto" aria-label=".form-control-lg example">
+                              <div id="emailHelp" class="form-text">Verifique que este correcto el nombre.</div>
                             </div>
-                            <div class="col">
-                              <p><b>Precio:</b>$559</p>
+                            <div class="mb-3">
+                              <label for="example" class="form-label">Codigo</label>
+                              <input class="form-control form-control-lg border-warning" style="border-radius: 20px;" type="number" placeholder="#" aria-label=".form-control-lg example">
                             </div>
-                          </div>
+                            <div class="mb-3">
+                              <label for="example" class="form-label ">Precio</label>
+                              <input class="form-control form-control-lg border-warning" style="border-radius: 20px;" type="number" placeholder="$" aria-label=".form-control-lg example">
+                            </div>
+                            <div class="mb-3">
+                              <label for="example" class="form-label">Tipo de Producto</label>
+                              <select class="form-select border-warning" style="border-radius: 20px;" aria-label="Default select example">
+                                <option selected>Tipo</option>
+                                <option value="1">Vitamina</option>
+                                <option value="2">Suplemento</option>
+                                <option value="3">Cuidado personal</option>
+                                <option value="4">Bebidas</option>
+                                <option value="5">Superfoods</option>
+                
+                              </select>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Descricion</label>
+                              <textarea class="form-control border-warning" style="border-radius: 20px;" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div>
+                              <label for="formFileLg" class="form-label">Imagen representativa</label>
+                              <input class="form-control form-control-lg border-warning" style="border-radius: 20px;" id="formFileLg" type="file">
+                            </div>
+                            <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Todo esta correcto</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Understood</button>
+                    
                         </div>
                       </div>
                     </div>
@@ -223,13 +276,7 @@
         </div>
       </div>
       <!-- Anuncios -->
-      <aside class="Ad-1">
-        <div id="fondo-ad">
-          <p>
-            Precios accesibles, posibilidades infinitas
-          </p>
-         </div>
-      </aside>
+      
       <!-- Vitaminas -->
       <a name="vita"></a>
       <div class="title">
@@ -248,7 +295,13 @@
                   <h5 class="card-title">Mens Multi Plus</h5>
                   <p class="card-text">Multivitamínico para hombres. Fórmula balanceada a base de Creatina, Vitamina C, Arginina, BCAAs, Vitaminas B3, B5, E, B6, B2, B1 y A, Ácido Fólico, Biotina, Vitamina K, D y B12..</p>
                   <p class="card-text"><small class="text-muted"><b>Precio: </b>$279</small></p>
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="button" class="btn btn-warning " >Editar</button>
+                      <button type="button" class="btn btn-primary" >Comprar</button></div>
+                  </div>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -263,6 +316,11 @@
                   <h5 class="card-title">Vitamina A 1000Mg </h5>
                   <p class="card-text">Auxiliar para el control de la conjuntivitis, crecimiento y mantenimiento de las células en mucosas, piel, visión, uñas y cabello. El consumo de este producto es responsabilidad de quien lo recomienda y de quien lo usa.                   </p>
                   <p class="card-text"><small class="text-muted"><b>Precio: </b>$279</small></p>
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="button" class="btn btn-warning " disabled>Editar</button>
+                      <button type="button" class="btn btn-primary" disabled>Comprar</button></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -278,6 +336,11 @@
                   <h5 class="card-title">Mens Multi Plus</h5>
                   <p class="card-text">Multivitamínico para hombres. Fórmula balanceada a base de Creatina, Vitamina C, Arginina, BCAAs, Vitaminas B3, B5, E, B6, B2, B1 y A, Ácido Fólico, Biotina, Vitamina K, D y B12..</p>
                   <p class="card-text"><small class="text-muted"><b>Precio: </b>$279</small></p>
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="button" class="btn btn-warning " disabled>Editar</button>
+                      <button type="button" class="btn btn-primary" disabled>Comprar</button></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -293,6 +356,11 @@
                   <h5 class="card-title">Mens Multi Plus</h5>
                   <p class="card-text">Multivitamínico para hombres. Fórmula balanceada a base de Creatina, Vitamina C, Arginina, BCAAs, Vitaminas B3, B5, E, B6, B2, B1 y A, Ácido Fólico, Biotina, Vitamina K, D y B12..</p>
                   <p class="card-text"><small class="text-muted"><b>Precio: </b>$279</small></p>
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="button" class="btn btn-warning " disabled>Editar</button>
+                      <button type="button" class="btn btn-primary" disabled>Comprar</button></div>
+                  </div>
                 </div>
               </div>
             </div>
